@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+
+.logo { font-size: 1.5rem; font-weight: 600; }
+.logo span { color: #00d2ff; }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { text-decoration: none; color: white; transition: 0.3s; }
+.nav-links a:hover { color: #00d2ff; }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #1a1a1a, #000);
+}
+
+.hero-content h1 { font-size: 4rem; margin-bottom: 10px; }
+.hero-content h1 span { color: #00d2ff; }
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #00d2ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover { transform: scale(1.1); }
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s all ease;
+}
+
+/* Card Style */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+.hero {
+    height: 100vh;      /* Poori screen ki height */
+    display: flex;      /* Flexbox on */
+    flex-direction: column; /* Elements ek ke niche ek rahen (Heading, then Para, then Button) */
+    justify-content: center; /* Vertically (upar-neeche se) center mein */
+    align-items: center;    /* Horizontally (left-right se) center mein */
+    text-align: center;
+}
+
+/* 1. Body ko clean karein */
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+
+/* 3. Hero Section ko Center mein layein */
+.hero {
+    height: 100vh; /* Poori screen ki height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical center */
+    align-items: center;    /* Horizontal center */
+    text-align: center;
+}
+
+/* 4. Inputs ko professional banayein */
+input, textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 8px;
+}
+
+/* 5. Button ka look */
+.btn {
+    padding: 12px 30px;
+    background-color: #00d2ff;
+    border: none;
+    border-radius: 50px; /* Round button */
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+navbar {
+    display: flex;                  /* Flexbox on karein */
+    justify-content: space-between; /* Sabse important: Logo ko left aur Links ko right bhej dega */
+    align-items: center;            /* Logo aur Links ko upar-neeche se center mein rakhega */
+    padding: 20px 8%;               /* Side se thodi jagah (padding) chhodne ke liye */
+    background-color: #49007a;         /* Background color */
+    position: fixed;                /* Scroll karne par bhi top par rahega */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;       /* Links ko ek line (row) mein lane ke liye */
+    list-style: none;    /* Bullet points hatane ke liye */
+    gap: 30px;           /* Home, About, Projects ke beech ka gap */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(209, 229, 219);
+    font-weight: 500;
+}
